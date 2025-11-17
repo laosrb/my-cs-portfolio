@@ -1,0 +1,1 @@
+export const siteInfo={name:'Your Name'};

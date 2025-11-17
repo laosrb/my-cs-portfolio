@@ -98,9 +98,9 @@ export default function Home() {
             {/* Tabs */}
             <div className="flex gap-4 mb-8 justify-center flex-wrap">
               {[
-                { id: "experience", label: "xp", path: "Experience" },
-                { id: "resume", label: "resume", path: "Resume" },
-                { id: "me", label: "me", path: "AboutMe" }
+                { id: "experience", label: "[xp]", path: "Experience" },
+                { id: "resume", label: "[resume]", path: "Resume" },
+                { id: "me", label: "[me]", path: "AboutMe" }
               ].map((tab) => (
                 <Link
                   key={tab.id}
@@ -126,4 +126,3 @@ export default function Home() {
     </div>
   );
 }
-

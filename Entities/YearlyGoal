@@ -1,0 +1,29 @@
+{
+  "name": "YearlyGoal",
+  "type": "object",
+  "properties": {
+    "year": {
+      "type": "integer",
+      "description": "Year for the goal"
+    },
+    "goal": {
+      "type": "string",
+      "description": "Goal description"
+    },
+    "progress": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Progress percentage"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the goal is completed"
+    }
+  },
+  "required": [
+    "year",
+    "goal"
+  ]
+}

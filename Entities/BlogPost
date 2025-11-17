@@ -1,0 +1,28 @@
+{
+  "name": "BlogPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Blog post title"
+    },
+    "content": {
+      "type": "string",
+      "description": "Blog post content"
+    },
+    "is_visible": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the blog post is visible to viewers"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the blog post was published"
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}

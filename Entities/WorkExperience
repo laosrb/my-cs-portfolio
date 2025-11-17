@@ -1,0 +1,48 @@
+{
+  "name": "WorkExperience",
+  "type": "object",
+  "properties": {
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "role": {
+      "type": "string",
+      "description": "Job title/role"
+    },
+    "company_logo_url": {
+      "type": "string",
+      "description": "URL to company logo"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "End date (leave empty for current role)"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Role summary and achievements"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "work",
+        "project",
+        "internship"
+      ],
+      "description": "Type of experience"
+    }
+  },
+  "required": [
+    "company",
+    "role",
+    "start_date",
+    "summary",
+    "type"
+  ]
+}

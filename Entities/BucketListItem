@@ -1,0 +1,27 @@
+{
+  "name": "BucketListItem",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Bucket list item"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional description"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the item is completed"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date completed"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

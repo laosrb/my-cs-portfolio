@@ -1,14 +1,28 @@
 import React from "react";
-import Home from "./pages/Home";
-import Experience from "./pages/Experience";
-import About from "./pages/About";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Layout from "./Layout";
+import Home from "./Pages/Home";
+import Experience from "./Pages/Experience";
+import Resume from "./Pages/Resume";
+import AboutMe from "./Pages/AboutMe";
 
-export default function App() {
+const queryClient = new QueryClient();
+
+function App() {
   return (
-    <div>
-      <Home />
-      <Experience />
-      <About />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout currentPageName="Home"><Home /></Layout>} />
+          <Route path="/experience" element={<Layout currentPageName="Experience"><Experience /></Layout>} />
+          <Route path="/resume" element={<Layout currentPageName="Resume"><Resume /></Layout>} />
+          <Route path="/about-me" element={<Layout currentPageName="AboutMe"><AboutMe /></Layout>} />
+        </Routes>
+      </Router>
+    </QueryClientProvider>
   );
 }
+
+export default App;
+
